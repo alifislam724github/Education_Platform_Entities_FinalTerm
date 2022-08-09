@@ -178,6 +178,62 @@ namespace Business_Logic_Layer.Services
             }
         }
 
+        /* Course services-------
+     * ---------------
+     * ---------------*/
+
+        public static List<CourseModel> GetCourse()
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Cours, CourseModel>())).Map<List<CourseModel>>(DataAccess.GetCourseDataAccess().Get());
+            return data;
+        }
+        public static CourseModel GetSingleCourse(int id)
+        {
+            var config = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Cours, CourseModel>()));
+            var data = config.Map<CourseModel>(DataAccess.GetCourseDataAccess().GetId(id));
+            return data;
+        }
+        public static bool CreateCourse(CourseModel obj)
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<CourseModel, Cours>())).Map<Cours>(obj);
+            // var data = config.Map<Institution>(obj);
+
+            try
+            {
+                DataAccess.GetCourseDataAccess().Create(data);
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public static bool UpdateCourse(CourseModel obj)
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<CourseModel, Cours>())).Map<Cours>(obj);
+            // var data = config.Map<Institution>(obj);
+
+            try
+            {
+                DataAccess.GetCourseDataAccess().Update(data);
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool DeleteCourse(int id)
+        {
+            DataAccess.GetCourseDataAccess().Delete(id);
+            return true;
+        }
 
     }
 }

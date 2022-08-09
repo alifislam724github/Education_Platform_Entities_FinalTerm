@@ -155,6 +155,55 @@ namespace Education_Platform_Backend_Logic.Controllers
             bool data = InstitutionService.DeleteNotice(id);
             return Request.CreateResponse(data ? true : false);
         }
+        /* Course Controller-------***********
+   *****************  Course Controller ---------------
+   * ********************---------------*/
+        [Route("api/AllCourse")]
+        [HttpGet]
+        public HttpResponseMessage GetCourse()
+        {
+            var data = InstitutionService.Get();
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+
+        }
+
+        [Route("api/SingleCourse/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetSingleCourse(int id)
+        {
+            var data = InstitutionService.GetSingle(id);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+
+        }
+
+        [Route("api/CreateCourse")]
+        [HttpPost]
+        public HttpResponseMessage CreateCourse(CourseModel obj)
+        {
+            bool data = InstitutionService.CreateCourse(obj);
+
+            return Request.CreateResponse(data ? true : false);
+
+
+        }
+
+        [Route("api/UpdateCourse")]
+        [HttpPost]
+        public HttpResponseMessage UpdateCourse(CourseModel obj)
+        {
+            bool data = InstitutionService.UpdateCourse(obj);
+            return Request.CreateResponse(data ? HttpStatusCode.OK : HttpStatusCode.BadRequest);
+
+        }
+
+        [Route("api/DeleteColurse/{id}")]
+        [HttpGet]
+        public HttpResponseMessage DeleteCourse(int id)
+        {
+            bool data = InstitutionService.Delete(id);
+            return Request.CreateResponse(data ? true : false);
+
+        }
     }
 }
 
