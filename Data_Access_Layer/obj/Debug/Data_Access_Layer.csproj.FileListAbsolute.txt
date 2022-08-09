@@ -1,0 +1,32 @@
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.AssemblyReference.cache
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CoreCompileInputs.cache
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll.config
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Data_Access_Layer.pdb
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\AutoMapper.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\EntityFramework.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Newtonsoft.Json.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\AutoMapper.xml
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\EntityFramework.xml
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.xml
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Newtonsoft.Json.xml
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CopyComplete
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.dll
+D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.pdb
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll.config
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\Data_Access_Layer.pdb
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\AutoMapper.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\EntityFramework.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\Newtonsoft.Json.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\AutoMapper.xml
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\EntityFramework.xml
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\bin\Debug\Newtonsoft.Json.xml
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.AssemblyReference.cache
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CoreCompileInputs.cache
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CopyComplete
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\obj\Debug\Data_Access_Layer.dll
+D:\Dot Net (Tasks)\New folder\Data_Access_Layer\obj\Debug\Data_Access_Layer.pdb

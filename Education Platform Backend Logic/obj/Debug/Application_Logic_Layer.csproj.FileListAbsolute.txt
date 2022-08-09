@@ -1,0 +1,118 @@
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.AssemblyReference.cache
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.CoreCompileInputs.cache
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Education Platform Backend Logic.dll.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Education Platform Backend Logic.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Education Platform Backend Logic.pdb
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csc.exe
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csc.exe.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csc.rsp
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csi.exe
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csi.exe.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\csi.rsp
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.Managed.Core.targets
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Buffers.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Collections.Immutable.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Memory.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Numerics.Vectors.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Reflection.Metadata.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\vbc.exe
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\vbc.exe.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\vbc.rsp
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\VBCSCompiler.exe
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\roslyn\VBCSCompiler.exe.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\AutoMapper.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Business_Logic_Layer.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Newtonsoft.Json.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Net.Http.Formatting.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Web.Http.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Web.Http.WebHost.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Data_Access_Layer.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\EntityFramework.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Business_Logic_Layer.pdb
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\AutoMapper.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Newtonsoft.Json.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Net.Http.Formatting.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Web.Http.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\System.Web.Http.WebHost.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Data_Access_Layer.pdb
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\Data_Access_Layer.dll.config
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\EntityFramework.xml
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.CopyComplete
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\obj\Debug\Education Platform Backend Logic.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\obj\Debug\Education Platform Backend Logic.pdb
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\EntityFramework.SqlServer.dll
+D:\.net practice\Education Platform Backend Logic\Education Platform Backend Logic\bin\EntityFramework.SqlServer.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Education Platform Backend Logic.dll.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Education Platform Backend Logic.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Education Platform Backend Logic.pdb
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csc.exe
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csc.exe.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csc.rsp
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csi.exe
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csi.exe.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\csi.rsp
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Buffers.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Collections.Immutable.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Memory.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Numerics.Vectors.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\vbc.exe
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\vbc.exe.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\vbc.rsp
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\VBCSCompiler.exe
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\roslyn\VBCSCompiler.exe.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\AutoMapper.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Business_Logic_Layer.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\EntityFramework.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\EntityFramework.SqlServer.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Newtonsoft.Json.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Net.Http.Formatting.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Web.Http.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Web.Http.WebHost.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Data_Access_Layer.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Business_Logic_Layer.pdb
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\AutoMapper.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\EntityFramework.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\EntityFramework.SqlServer.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Newtonsoft.Json.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Net.Http.Formatting.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Web.Http.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\System.Web.Http.WebHost.xml
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Data_Access_Layer.pdb
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\bin\Data_Access_Layer.dll.config
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.AssemblyReference.cache
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.CoreCompileInputs.cache
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\obj\Debug\Application_Logic_Layer.csproj.CopyComplete
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\obj\Debug\Education Platform Backend Logic.dll
+D:\Dot Net (Tasks)\New folder\Education Platform Backend Logic\obj\Debug\Education Platform Backend Logic.pdb
