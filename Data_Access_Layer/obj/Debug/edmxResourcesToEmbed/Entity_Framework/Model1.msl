@@ -226,11 +226,11 @@
     <EntitySetMapping Name="InstitutionTokens">
       <EntityTypeMapping TypeName="Education_Platform_Final_TermModel.InstitutionToken">
         <MappingFragment StoreEntitySet="InstitutionTokens">
-          <ScalarProperty Name="Token" ColumnName="Token" />
-          <ScalarProperty Name="ExpiredAt" ColumnName="ExpiredAt" />
-          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
-          <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ExpiredAt" ColumnName="ExpiredAt" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

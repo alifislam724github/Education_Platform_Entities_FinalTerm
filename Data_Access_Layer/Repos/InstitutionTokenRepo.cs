@@ -20,7 +20,7 @@ namespace Data_Access_Layer.Repos
         public InstitutionToken Authenticate(Institution use)
         {
             InstitutionToken t = null;
-            var u = db.Admins.FirstOrDefault(e => e.Email == use.Email && e.Password == use.Password);
+            var u = db.Institutions.FirstOrDefault(e => e.Email == use.Email && e.Password == use.Password);
             if (u != null)
             {
                 var g = Guid.NewGuid().ToString();

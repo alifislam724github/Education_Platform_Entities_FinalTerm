@@ -22,7 +22,7 @@ namespace Education_Platform_Backend_Logic.Controllers
 
             }
 
-            return Request.CreateResponse(HttpStatusCode.NotFound, "user the pro");
+            return Request.CreateResponse(HttpStatusCode.NotFound, "user not found");
         }
 
         [Route("api/Institution/Logout")]

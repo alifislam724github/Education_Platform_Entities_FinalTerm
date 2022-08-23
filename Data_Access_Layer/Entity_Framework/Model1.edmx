@@ -102,13 +102,11 @@
           <Property Name="IsValid" Type="varchar(max)" />
           <Property Name="Photo" Type="image" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionTokens' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="InstitutionTokens">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InstitutionId" Type="int" />
           <Property Name="CreatedAt" Type="varchar(max)" />
           <Property Name="ExpiredAt" Type="varchar(max)" />
@@ -543,6 +541,7 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <EntitySet Name="CourseModule" EntityType="Self.CourseModule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionTokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mentors" EntityType="Self.Mentors" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PasswordChangeRequests" EntityType="Self.PasswordChangeRequests" Schema="dbo" store:Type="Tables" />
@@ -552,15 +551,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ValidStudents" EntityType="Self.ValidStudents" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionTokens" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [InstitutionTokens].[Id] AS [Id], 
-    [InstitutionTokens].[InstitutionId] AS [InstitutionId], 
-    [InstitutionTokens].[CreatedAt] AS [CreatedAt], 
-    [InstitutionTokens].[ExpiredAt] AS [ExpiredAt], 
-    [InstitutionTokens].[Token] AS [Token]
-    FROM [dbo].[InstitutionTokens] AS [InstitutionTokens]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_AnswerScripts_Assignments" Association="Self.FK_AnswerScripts_Assignments">
             <End Role="Assignments" EntitySet="Assignments" />
             <End Role="AnswerScripts" EntitySet="AnswerScripts" />
@@ -785,7 +775,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Certificates" Relationship="Self.FK_Certificates_Institutions" FromRole="Institutions" ToRole="Certificates" />
           <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_Institutions" FromRole="Institutions" ToRole="Courses" />
-          <NavigationProperty Name="Notice" Relationship="Self.FK_Notices_Institutions" FromRole="Institutions" ToRole="Notices" />
           <NavigationProperty Name="Results" Relationship="Self.FK_Results_Institutions" FromRole="Institutions" ToRole="Results" />
           <NavigationProperty Name="Transaction" Relationship="Self.FK_Transactions_Institutions" FromRole="Institutions" ToRole="Transactions" />
         </EntityType>
@@ -808,7 +797,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <NavigationProperty Name="Counselings" Relationship="Self.FK_Counselings_Mentors" FromRole="Mentors" ToRole="Counselings" />
           <NavigationProperty Name="CourseModules" Relationship="Self.FK_CourseModule_Mentors" FromRole="Mentors" ToRole="CourseModule" />
           <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_Mentors" FromRole="Mentors" ToRole="Courses" />
-          <NavigationProperty Name="Notices" Relationship="Self.FK_Notices_Mentors" FromRole="Mentors" ToRole="Notices" />
           <NavigationProperty Name="Ratings" Relationship="Self.FK_Ratings_Mentors" FromRole="Mentors" ToRole="Ratings" />
           <NavigationProperty Name="Results" Relationship="Self.FK_Results_Mentors" FromRole="Mentors" ToRole="Results" />
           <NavigationProperty Name="Reviewstudents" Relationship="Self.FK_Reviewstudents_Mentors" FromRole="Mentors" ToRole="Reviewstudents" />
@@ -824,8 +812,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="MentorId" Type="Int32" />
-          <NavigationProperty Name="Institution" Relationship="Self.FK_Notices_Institutions" FromRole="Notices" ToRole="Institutions" />
-          <NavigationProperty Name="Mentor" Relationship="Self.FK_Notices_Mentors" FromRole="Notices" ToRole="Mentors" />
         </EntityType>
         <EntityType Name="PasswordChangeRequest">
           <Key>
@@ -930,6 +916,16 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <Property Name="CourseId" Type="Int32" />
           <NavigationProperty Name="Cours" Relationship="Self.FK_ValidStudents_Courses" FromRole="ValidStudents" ToRole="Courses" />
           <NavigationProperty Name="Student" Relationship="Self.FK_ValidStudents_Students" FromRole="ValidStudents" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="InstitutionToken">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InstitutionId" Type="Int32" />
+          <Property Name="CreatedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExpiredAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_AnswerScripts_Assignments">
           <End Role="Assignments" Type="Self.Assignment" Multiplicity="0..1" />
@@ -1123,18 +1119,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Notices_Institutions">
-          <End Role="Institutions" Type="Self.Institution" Multiplicity="1" />
-          <End Role="Notices" Type="Self.Notice" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Institutions">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Notices">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Results_Institutions">
           <End Role="Institutions" Type="Self.Institution" Multiplicity="0..1" />
           <End Role="Results" Type="Self.Result" Multiplicity="*" />
@@ -1156,18 +1140,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
             </Principal>
             <Dependent Role="Transactions">
               <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Notices_Mentors">
-          <End Role="Mentors" Type="Self.Mentor" Multiplicity="0..1" />
-          <End Role="Notices" Type="Self.Notice" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Mentors">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Notices">
-              <PropertyRef Name="MentorId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1285,6 +1257,7 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <EntitySet Name="Students" EntityType="Self.Student" />
           <EntitySet Name="Transactions" EntityType="Self.Transaction" />
           <EntitySet Name="ValidStudents" EntityType="Self.ValidStudent" />
+          <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionToken" />
           <AssociationSet Name="FK_AnswerScripts_Assignments" Association="Self.FK_AnswerScripts_Assignments">
             <End Role="Assignments" EntitySet="Assignments" />
             <End Role="AnswerScripts" EntitySet="AnswerScripts" />
@@ -1349,10 +1322,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
             <End Role="Courses" EntitySet="Courses" />
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Notices_Institutions" Association="Self.FK_Notices_Institutions">
-            <End Role="Institutions" EntitySet="Institutions" />
-            <End Role="Notices" EntitySet="Notices" />
-          </AssociationSet>
           <AssociationSet Name="FK_Results_Institutions" Association="Self.FK_Results_Institutions">
             <End Role="Institutions" EntitySet="Institutions" />
             <End Role="Results" EntitySet="Results" />
@@ -1360,10 +1329,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <AssociationSet Name="FK_Transactions_Institutions" Association="Self.FK_Transactions_Institutions">
             <End Role="Institutions" EntitySet="Institutions" />
             <End Role="Transactions" EntitySet="Transactions" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Notices_Mentors" Association="Self.FK_Notices_Mentors">
-            <End Role="Mentors" EntitySet="Mentors" />
-            <End Role="Notices" EntitySet="Notices" />
           </AssociationSet>
           <AssociationSet Name="FK_Ratings_Mentors" Association="Self.FK_Ratings_Mentors">
             <End Role="Mentors" EntitySet="Mentors" />
@@ -1397,18 +1362,7 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
             <End Role="Students" EntitySet="Students" />
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
-          <EntitySet Name="InstitutionTokens" EntityType="Education_Platform_Final_TermModel.InstitutionToken" />
         </EntityContainer>
-        <EntityType Name="InstitutionToken">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="InstitutionId" Type="Int32" />
-          <Property Name="CreatedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ExpiredAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1640,11 +1594,11 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
           <EntitySetMapping Name="InstitutionTokens">
             <EntityTypeMapping TypeName="Education_Platform_Final_TermModel.InstitutionToken">
               <MappingFragment StoreEntitySet="InstitutionTokens">
-                <ScalarProperty Name="Token" ColumnName="Token" />
-                <ScalarProperty Name="ExpiredAt" ColumnName="ExpiredAt" />
-                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
-                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ExpiredAt" ColumnName="ExpiredAt" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,7 +14,7 @@ namespace Business_Logic_Layer.Services
     {
         public static InstitutionTokenModel Auth(InstitutionModel user)
         {
-            var dbuser = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<AdminModel, Institution>())).Map<Institution>(user);
+            var dbuser = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<InstitutionModel, Institution>())).Map<Institution>(user);
             var createToken = DataAccess.GetInstitutionTokenDataAccess().Authenticate(dbuser);
             var returnToken = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<InstitutionToken, InstitutionTokenModel>())).Map<InstitutionTokenModel>(createToken);
             return returnToken;

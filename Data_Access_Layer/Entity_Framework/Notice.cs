@@ -21,8 +21,5 @@ namespace Data_Access_Layer.Entity_Framework
         public string Details { get; set; }
         public string Date { get; set; }
         public Nullable<int> MentorId { get; set; }
-    
-        public virtual Institution Institution { get; set; }
-        public virtual Mentor Mentor { get; set; }
     }
 }

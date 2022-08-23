@@ -97,13 +97,11 @@
     <Property Name="IsValid" Type="varchar(max)" />
     <Property Name="Photo" Type="image" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionTokens' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="InstitutionTokens">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="InstitutionId" Type="int" />
     <Property Name="CreatedAt" Type="varchar(max)" />
     <Property Name="ExpiredAt" Type="varchar(max)" />
@@ -538,6 +536,7 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
     <EntitySet Name="CourseModule" EntityType="Self.CourseModule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionTokens" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Mentors" EntityType="Self.Mentors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PasswordChangeRequests" EntityType="Self.PasswordChangeRequests" Schema="dbo" store:Type="Tables" />
@@ -547,15 +546,6 @@ warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionToken
     <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ValidStudents" EntityType="Self.ValidStudents" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionTokens" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InstitutionTokens].[Id] AS [Id], 
-    [InstitutionTokens].[InstitutionId] AS [InstitutionId], 
-    [InstitutionTokens].[CreatedAt] AS [CreatedAt], 
-    [InstitutionTokens].[ExpiredAt] AS [ExpiredAt], 
-    [InstitutionTokens].[Token] AS [Token]
-    FROM [dbo].[InstitutionTokens] AS [InstitutionTokens]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_AnswerScripts_Assignments" Association="Self.FK_AnswerScripts_Assignments">
       <End Role="Assignments" EntitySet="Assignments" />
       <End Role="AnswerScripts" EntitySet="AnswerScripts" />
