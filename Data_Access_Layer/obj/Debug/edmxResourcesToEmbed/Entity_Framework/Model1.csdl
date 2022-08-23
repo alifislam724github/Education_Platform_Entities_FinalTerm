@@ -727,5 +727,16 @@
       <End Role="Students" EntitySet="Students" />
       <End Role="ValidStudents" EntitySet="ValidStudents" />
     </AssociationSet>
+    <EntitySet Name="InstitutionTokens" EntityType="Education_Platform_Final_TermModel.InstitutionToken" />
   </EntityContainer>
+  <EntityType Name="InstitutionToken">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="InstitutionId" Type="Int32" />
+    <Property Name="CreatedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ExpiredAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

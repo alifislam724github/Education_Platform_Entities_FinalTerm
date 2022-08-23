@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Education_Platform_Final_TermModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Education_Platform_Final_TermModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="Id" />
@@ -101,6 +101,18 @@
           <Property Name="WebsiteLink" Type="varchar(max)" />
           <Property Name="IsValid" Type="varchar(max)" />
           <Property Name="Photo" Type="image" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Education_Platform_Final_Term.dbo.InstitutionTokens' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="InstitutionTokens">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InstitutionId" Type="int" />
+          <Property Name="CreatedAt" Type="varchar(max)" />
+          <Property Name="ExpiredAt" Type="varchar(max)" />
+          <Property Name="Token" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Mentors">
           <Key>
@@ -330,30 +342,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Notices_Institutions">
-          <End Role="Institutions" Type="Self.Institutions" Multiplicity="1" />
-          <End Role="Notices" Type="Self.Notices" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Institutions">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Notices">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Notices_Mentors">
-          <End Role="Mentors" Type="Self.Mentors" Multiplicity="0..1" />
-          <End Role="Notices" Type="Self.Notices" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Mentors">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Notices">
-              <PropertyRef Name="MentorId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Ratings_Courses">
           <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
           <End Role="Ratings" Type="Self.Ratings" Multiplicity="0..1" />
@@ -564,6 +552,15 @@
           <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ValidStudents" EntityType="Self.ValidStudents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InstitutionTokens" EntityType="Self.InstitutionTokens" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [InstitutionTokens].[Id] AS [Id], 
+    [InstitutionTokens].[InstitutionId] AS [InstitutionId], 
+    [InstitutionTokens].[CreatedAt] AS [CreatedAt], 
+    [InstitutionTokens].[ExpiredAt] AS [ExpiredAt], 
+    [InstitutionTokens].[Token] AS [Token]
+    FROM [dbo].[InstitutionTokens] AS [InstitutionTokens]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_AnswerScripts_Assignments" Association="Self.FK_AnswerScripts_Assignments">
             <End Role="Assignments" EntitySet="Assignments" />
             <End Role="AnswerScripts" EntitySet="AnswerScripts" />
@@ -603,14 +600,6 @@
           <AssociationSet Name="FK_Courses_Mentors" Association="Self.FK_Courses_Mentors">
             <End Role="Mentors" EntitySet="Mentors" />
             <End Role="Courses" EntitySet="Courses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Notices_Institutions" Association="Self.FK_Notices_Institutions">
-            <End Role="Institutions" EntitySet="Institutions" />
-            <End Role="Notices" EntitySet="Notices" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Notices_Mentors" Association="Self.FK_Notices_Mentors">
-            <End Role="Mentors" EntitySet="Mentors" />
-            <End Role="Notices" EntitySet="Notices" />
           </AssociationSet>
           <AssociationSet Name="FK_Ratings_Courses" Association="Self.FK_Ratings_Courses">
             <End Role="Courses" EntitySet="Courses" />
@@ -677,8 +666,7 @@
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Education_Platform_Final_TermModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1409,7 +1397,18 @@
             <End Role="Students" EntitySet="Students" />
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
+          <EntitySet Name="InstitutionTokens" EntityType="Education_Platform_Final_TermModel.InstitutionToken" />
         </EntityContainer>
+        <EntityType Name="InstitutionToken">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InstitutionId" Type="Int32" />
+          <Property Name="CreatedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExpiredAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1635,6 +1634,17 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstitutionTokens">
+            <EntityTypeMapping TypeName="Education_Platform_Final_TermModel.InstitutionToken">
+              <MappingFragment StoreEntitySet="InstitutionTokens">
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="ExpiredAt" ColumnName="ExpiredAt" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

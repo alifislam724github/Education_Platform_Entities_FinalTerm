@@ -12,18 +12,18 @@ namespace Business_Logic_Layer.Services
 {
     public class InstitutionService
     {
-        public static List<InstitutionModel> Get()
+        public static List<InstitutionModel> GetInstitution()
         {
             var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Institution, InstitutionModel>())).Map<List<InstitutionModel>>(DataAccess.GetInstitutionDataAccess().Get());
             return data;
         }
-        public static InstitutionModel GetSingle(int id)
+        public static InstitutionModel GetSingleInstitution(int id)
         {
             var config = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Institution, InstitutionModel>()));
             var data = config.Map<InstitutionModel>(DataAccess.GetInstitutionDataAccess().GetId(id));
             return data;
         }
-        public static bool Create(InstitutionModel obj)
+        public static bool CreateInstitution(InstitutionModel obj)
         {
             var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<InstitutionModel, Institution>())).Map<Institution>(obj);
             // var data = config.Map<Institution>(obj);
@@ -41,7 +41,7 @@ namespace Business_Logic_Layer.Services
             }
 
         }
-        public static bool Update(InstitutionModel obj)
+        public static bool UpdateInstitution(InstitutionModel obj)
         {
             var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<InstitutionModel, Institution>())).Map<Institution>(obj);
             // var data = config.Map<Institution>(obj);
@@ -59,7 +59,7 @@ namespace Business_Logic_Layer.Services
             }
         }
 
-        public static bool Delete(int id)
+        public static bool DeleteInstitution(int id)
         {
             DataAccess.GetInstitutionDataAccess().Delete(id);
             return true;
@@ -178,9 +178,9 @@ namespace Business_Logic_Layer.Services
             }
         }
 
-        /* Course services-------
-     * ---------------
-     * ---------------*/
+        /* ----------------Course services---------------
+     ***********************---------------
+     *************************** ---------------*/
 
         public static List<CourseModel> GetCourse()
         {
@@ -235,5 +235,82 @@ namespace Business_Logic_Layer.Services
             return true;
         }
 
+
+        /* ----------------Result services---------------
+     ***********************---------------
+     *************************** ---------------*/
+
+        public static List<ResultModel> GetResult()
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Result, ResultModel>())).Map<List<ResultModel>>(DataAccess.GetResultDataAccess().Get());
+            return data;
+        }
+
+        public static ResultModel GetSingleResult(int id)
+        {
+            var config = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Result, ResultModel>()));
+            var data = config.Map<ResultModel>(DataAccess.GetResultDataAccess().GetId(id));
+            return data;
+        }
+
+            public static bool CreateResult(ResultModel obj)
+            {
+                var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<ResultModel, Result>())).Map<Result>(obj);
+                // var data = config.Map<Institution>(obj);
+
+                try
+                {
+                    DataAccess.GetResultDataAccess().Create(data);
+
+                    return true;
+
+                }
+                catch
+                {
+                    return false;
+                }
+
+            }
+        public static bool UpdateResult(ResultModel obj)
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<ResultModel, Result>())).Map<Result>(obj);
+            // var data = config.Map<Institution>(obj);
+
+            try
+            {
+                DataAccess.GetResultDataAccess().Update(data);
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool DeleteResult(int id)
+        {
+            DataAccess.GetResultDataAccess().Delete(id);
+            return true;
+        }
+
+        /* ----------------Transaction services---------------
+   ***********************---------------
+   *************************** ---------------*/
+        public static List<TransactionModel> GetTransaction()
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Transaction, TransactionModel>())).Map<List<TransactionModel>>(DataAccess.GetTransactionDataAccess().Get());
+            return data;
+        }
+
+        public static TransactionModel GetSingleTransaction(int id)
+        {
+            var config = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Transaction, TransactionModel>()));
+            var data = config.Map<TransactionModel>(DataAccess.GetTransactionDataAccess().GetId(id));
+            return data;
+        }
+
     }
 }
+

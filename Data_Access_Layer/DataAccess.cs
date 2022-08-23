@@ -35,5 +35,18 @@ namespace Data_Access_Layer
         {
             return new CourseRepo(db);
         }
+        public static IRepo<Result, int> GetResultDataAccess()
+        {
+            return new ResultRepo(db);
+        }
+
+        public static IRepo<Transaction, int> GetTransactionDataAccess()
+        {
+            return new TransactionRepo(db);
+        }
+        public static IInstitutionAuth GetInstitutionTokenDataAccess()
+        {
+            return new InstitutionTokenRepo(db);
+        }
     }
 }
